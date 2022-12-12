@@ -148,15 +148,15 @@ const Form = () => {
 
   return (
     <>
-    <StyleForm onSubmit={submitForm}>
+    <StyleForm aria-label='New employee form' onSubmit={submitForm}>
         <StyleContainer>
             <label htmlFor='firstname'>FirstName</label>
-            <input type="text" name='firstname' id='firstname' onChange={(e) => setFirstname(e.target.value)} value={firstName} required/>
+            <input aria-label='firstname input' type="text" name='firstname' id='firstname' onChange={(e) => setFirstname(e.target.value)} value={firstName} required/>
         </StyleContainer>
 
         <StyleContainer>
             <label htmlFor='lastname'>LastName</label>
-            <input type="text" name='lastname' id='lastname' onChange={(e) => setLastName(e.target.value)} required/>
+            <input aria-label='lastname input' type="text" name='lastname' id='lastname' onChange={(e) => setLastName(e.target.value)} required/>
         </StyleContainer>
         
         <StyleContainer>
@@ -166,18 +166,18 @@ const Form = () => {
 
         <StyleContainer>
             <label className='start' htmlFor='start'>Start Date</label>
-            <Calendar setInputDate={setStartDate}/>
+            <Calendar label='Start date picker' setInputDate={setStartDate}/>
         </StyleContainer>
 
         <StyleFieldSet>
             <legend>Adress</legend>
             <StyleContainer>
                 <label htmlFor='street adress_label'>Street</label>
-                <input type="text" name='street' id='street' onChange={(e) => setStreet(e.target.value)} required/>
+                <input aria-label='street input' type="text" name='street' id='street' onChange={(e) => setStreet(e.target.value)} required/>
             </StyleContainer>
             <StyleContainer>
                 <label htmlFor='city adress_label'>City</label>
-                <input type="text" name='city' id='city' onChange={(e) => setCity(e.target.value)} required/>
+                <input aria-label='city input' type="text" name='city' id='city' onChange={(e) => setCity(e.target.value)} required/>
             </StyleContainer>
             <StyleContainer>
                 <label htmlFor='state adress_label'>State</label>
@@ -185,13 +185,13 @@ const Form = () => {
             </StyleContainer>
             <StyleContainer>
                 <label htmlFor='zip-code adress_label'>Zip-code</label>
-                <input type="number" name='zip-code' id='zip-code' onChange={(e) => setZipCode(e.target.value)} required/>
+                <input aria-label='Zip-code input' type="number" name='zip-code' id='zip-code' onChange={(e) => setZipCode(e.target.value)} required/>
             </StyleContainer>
         </StyleFieldSet>
 
         <StyleContainer>
             <label className='department' htmlFor='department'>Department</label>
-            <DropDownSelect styles options={departmentsList} selected={departmentsList[0]} setInput={setSelectedDepartment}/>
+            <DropDownSelect options={departmentsList} selected={departmentsList[0]} setInput={setSelectedDepartment}/>
         </StyleContainer>
 
         <StyleBTN type='submit'>Save</StyleBTN>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import logo from '../assets/logo.png'
 
 /**
  * Styles
@@ -28,7 +27,7 @@ const StyleHeader = styled.header`
         font-weight: 700;
         margin-top: 0;
         margin-bottom: 0;
-        text-shadow: 5px 5px 5px ${colors.lightGreen};
+        text-shadow: 5px 5px 0px ${colors.lightGreen};
     }
 
     nav {
@@ -55,7 +54,6 @@ const StyleNavLink = styled(Link)`
 export default function Header() {
     return (
         <StyleHeader>
-            <img src={logo}></img>
             <h1>HRnet</h1>
             <nav>
                 <StyleNavLink to="/">Create Employee</StyleNavLink>

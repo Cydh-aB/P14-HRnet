@@ -20,6 +20,7 @@ const Calendar = ({ setInputDate }) => {
         dateFormat= "dd/MM/yyyy"
         closeOnScroll={true}
         showWeekNumbers
+        ariaLabelledBy='Date picker'
     />
   )
 }

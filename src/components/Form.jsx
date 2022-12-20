@@ -7,7 +7,7 @@ import DropDownSelect from './DropDownSelect'
 import styled from 'styled-components'
 import { addInList } from '../redux/feature/employeeSlice'
 import { useDispatch, useSelector } from 'react-redux'
-import { Modal } from 'component-modal'
+import { Modal } from "component-modal/dist/Modal"
 
 /** Styles **/
 

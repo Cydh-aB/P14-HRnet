@@ -10,7 +10,7 @@ const Calendar = ({ setInputDate }) => {
 
   function handleChange(e) {
     setDisplayDate(e)
-    setInputDate(e?.toLocalDateString("fr-FR"))
+    setInputDate(e?.toLocaleDateString("fr-FR"))
   }
 
   return (
